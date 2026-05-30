@@ -3188,14 +3188,10 @@
                 const isFemale = charData.is_female;
                 const genderSuffix = isFemale ? " (F)" : " (M)";
                 
-                if (isFE8Promoted(defaultClass) || defaultClass === "Manakete" || defaultClass === "Dancer") {
-                    return defaultClass;
-                }
-                
-                // Trainees
+                // Trainees (with customized branch paths in average stats JSON)
                 if (charName === "Ross") return "Warrior (via Fighter)";
-                if (charName === "Amelia") return "General (F) (via Knight (F))";
-                if (charName === "Ewan") return "Sage (M) (via Mage (M))";
+                if (charName === "Amelia") return "General (F)";
+                if (charName === "Ewan") return "Sage (M) (via Mage)";
                 
                 // Lords
                 if (defaultClass === "Lord") {
@@ -3203,32 +3199,41 @@
                     return "Great Lord (Ephraim)";
                 }
                 
-                const mapping = {
-                    "Cavalier": "Paladin",
-                    "Knight": "General",
-                    "Thief": "Rogue",
-                    "Mercenary": "Hero",
-                    "Myrmidon": "Swordmaster",
-                    "Archer": "Sniper",
-                    "Wyvern Rider": "Wyvern Lord",
-                    "Pegasus Knight": "Falcoknight",
-                    "Mage": "Sage",
-                    "Shaman": "Druid",
-                    "Priest": "Bishop",
-                    "Monk": "Bishop",
-                    "Cleric": "Bishop",
-                    "Troubadour": "Valkyrie",
-                    "Fighter": "Warrior",
-                    "Pirate": "Berserker"
-                };
-                
-                const promo = mapping[defaultClass];
-                if (!promo) return defaultClass;
-                
-                if (["Paladin", "General", "Hero", "Swordmaster", "Sniper", "Wyvern Lord", "Sage", "Druid", "Bishop"].includes(promo)) {
-                    return `${promo}${genderSuffix}`;
+                let targetClass = defaultClass;
+                if (!isFE8Promoted(defaultClass) && defaultClass !== "Manakete" && defaultClass !== "Dancer") {
+                    const mapping = {
+                        "Cavalier": "Paladin",
+                        "Knight": "General",
+                        "Thief": "Rogue",
+                        "Mercenary": "Hero",
+                        "Myrmidon": "Swordmaster",
+                        "Archer": "Sniper",
+                        "Wyvern Rider": "Wyvern Lord",
+                        "Pegasus Knight": "Falcoknight",
+                        "Mage": "Sage",
+                        "Shaman": "Druid",
+                        "Priest": "Bishop",
+                        "Monk": "Bishop",
+                        "Cleric": "Bishop",
+                        "Troubadour": "Valkyrie",
+                        "Fighter": "Warrior",
+                        "Pirate": "Berserker"
+                    };
+                    targetClass = mapping[defaultClass] || defaultClass;
                 }
-                return promo;
+                
+                // Gender-suffixed promoted classes in GBA FE8 data:
+                // Includes standard promotions as well as pre-promotes.
+                const genderedPromoted = new Set([
+                    "Paladin", "General", "Hero", "Swordmaster", "Sniper", "Wyvern Lord", 
+                    "Sage", "Druid", "Bishop", "Great Knight", "Berserker", "Mage Knight", 
+                    "Ranger", "Assassin", "Summoner"
+                ]);
+                
+                if (genderedPromoted.has(targetClass)) {
+                    return `${targetClass}${genderSuffix}`;
+                }
+                return targetClass;
             }
             
             if (currentGame === "fe7") {
