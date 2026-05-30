@@ -1,0 +1,10 @@
+# Python bytecode caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Scraped Serenes Forest HTML cache (automatically rebuilt by python engine if needed)
+cache/
+
+# Local backup files
+*.bak
