@@ -1,0 +1,3322 @@
+{
+    "characters": {
+        "Marth": {
+            "name": "Marth",
+            "join_lv": 6,
+            "default_class": "Lord",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 8,
+                "Str": 3,
+                "Mag": 0,
+                "Skl": 7,
+                "Spd": 3,
+                "Lck": 9,
+                "Def": 1,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 45,
+                "Mag": 5,
+                "Skl": 45,
+                "Spd": 45,
+                "Lck": 80,
+                "Def": 25,
+                "Res": 10
+            }
+        },
+        "My Unit (M)": {
+            "name": "My Unit (M)",
+            "join_lv": 1,
+            "default_class": "Cavalier",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 2,
+                "Str": 2,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 1,
+                "Lck": 3,
+                "Def": 0,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 25,
+                "Mag": 15,
+                "Skl": 30,
+                "Spd": 30,
+                "Lck": 60,
+                "Def": 20,
+                "Res": 10
+            }
+        },
+        "My Unit (F)": {
+            "name": "My Unit (F)",
+            "join_lv": 1,
+            "default_class": "Pegasus Knight",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 2,
+                "Str": 2,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 1,
+                "Lck": 3,
+                "Def": 0,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 25,
+                "Mag": 15,
+                "Skl": 30,
+                "Spd": 30,
+                "Lck": 60,
+                "Def": 20,
+                "Res": 10
+            }
+        },
+        "Luke": {
+            "name": "Luke",
+            "join_lv": 1,
+            "default_class": "Cavalier",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 2,
+                "Str": 2,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 1,
+                "Lck": 4,
+                "Def": 0,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 45,
+                "Mag": 0,
+                "Skl": 25,
+                "Spd": 40,
+                "Lck": 40,
+                "Def": 25,
+                "Res": 10
+            }
+        },
+        "Rody": {
+            "name": "Rody",
+            "join_lv": 1,
+            "default_class": "Cavalier",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 2,
+                "Str": 1,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 0,
+                "Lck": 5,
+                "Def": -1,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 35,
+                "Mag": 0,
+                "Skl": 35,
+                "Spd": 55,
+                "Lck": 60,
+                "Def": 25,
+                "Res": 10
+            }
+        },
+        "Cecil": {
+            "name": "Cecil",
+            "join_lv": 3,
+            "default_class": "Cavalier",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 1,
+                "Str": 1,
+                "Mag": 0,
+                "Skl": 6,
+                "Spd": 3,
+                "Lck": 6,
+                "Def": -2,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 30,
+                "Mag": 20,
+                "Skl": 45,
+                "Spd": 65,
+                "Lck": 50,
+                "Def": 15,
+                "Res": 10
+            }
+        },
+        "Gordin": {
+            "name": "Gordin",
+            "join_lv": 5,
+            "default_class": "Archer",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 5,
+                "Str": 4,
+                "Mag": 0,
+                "Skl": 4,
+                "Spd": 2,
+                "Lck": 5,
+                "Def": 2,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 30,
+                "Mag": 0,
+                "Skl": 20,
+                "Spd": 10,
+                "Lck": 50,
+                "Def": 20,
+                "Res": 10
+            }
+        },
+        "Ryan": {
+            "name": "Ryan",
+            "join_lv": 1,
+            "default_class": "Archer",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 2,
+                "Str": 2,
+                "Mag": 0,
+                "Skl": 1,
+                "Spd": 0,
+                "Lck": 3,
+                "Def": 1,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 40,
+                "Mag": 0,
+                "Skl": 60,
+                "Spd": 20,
+                "Lck": 40,
+                "Def": 25,
+                "Res": 10
+            }
+        },
+        "Draug": {
+            "name": "Draug",
+            "join_lv": 6,
+            "default_class": "Knight",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 4,
+                "Str": 4,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 5,
+                "Lck": 3,
+                "Def": 0,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 20,
+                "Str": 25,
+                "Mag": 0,
+                "Skl": 30,
+                "Spd": 50,
+                "Lck": 40,
+                "Def": 25,
+                "Res": 10
+            }
+        },
+        "Arran": {
+            "name": "Arran",
+            "join_lv": 3,
+            "default_class": "Paladin",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 4,
+                "Str": 3,
+                "Mag": 0,
+                "Skl": 7,
+                "Spd": 4,
+                "Lck": 4,
+                "Def": 2,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 0,
+                "Str": 0,
+                "Mag": 0,
+                "Skl": 0,
+                "Spd": 0,
+                "Lck": 10,
+                "Def": 0,
+                "Res": 0
+            }
+        },
+        "Malliesia": {
+            "name": "Malliesia",
+            "join_lv": 1,
+            "default_class": "Cleric",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 0,
+                "Str": 0,
+                "Mag": 1,
+                "Skl": 0,
+                "Spd": 1,
+                "Lck": 12,
+                "Def": 0,
+                "Res": -3
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 0,
+                "Mag": 30,
+                "Skl": 15,
+                "Spd": 40,
+                "Lck": 40,
+                "Def": 30,
+                "Res": 10
+            }
+        },
+        "Catria": {
+            "name": "Catria",
+            "join_lv": 6,
+            "default_class": "Pegasus Knight",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 6,
+                "Str": 3,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 7,
+                "Lck": 9,
+                "Def": 3,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 40,
+                "Mag": 10,
+                "Skl": 60,
+                "Spd": 55,
+                "Lck": 50,
+                "Def": 20,
+                "Res": 10
+            }
+        },
+        "Warren": {
+            "name": "Warren",
+            "join_lv": 2,
+            "default_class": "Hunter",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 4,
+                "Str": 1,
+                "Mag": 0,
+                "Skl": 1,
+                "Spd": 2,
+                "Lck": 1,
+                "Def": 1,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 40,
+                "Mag": 0,
+                "Skl": 45,
+                "Spd": 15,
+                "Lck": 40,
+                "Def": 25,
+                "Res": 10
+            }
+        },
+        "Cord": {
+            "name": "Cord",
+            "join_lv": 2,
+            "default_class": "Fighter",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 0,
+                "Str": 2,
+                "Mag": 0,
+                "Skl": 4,
+                "Spd": 2,
+                "Lck": 5,
+                "Def": 2,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 20,
+                "Mag": 10,
+                "Skl": 15,
+                "Spd": 40,
+                "Lck": 50,
+                "Def": 15,
+                "Res": 10
+            }
+        },
+        "Linde": {
+            "name": "Linde",
+            "join_lv": 4,
+            "default_class": "Mage",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 4,
+                "Str": 0,
+                "Mag": 1,
+                "Skl": 4,
+                "Spd": 5,
+                "Lck": 8,
+                "Def": 0,
+                "Res": 1
+            },
+            "base_growths": {
+                "HP": 20,
+                "Str": 10,
+                "Mag": 10,
+                "Skl": 60,
+                "Spd": 55,
+                "Lck": 80,
+                "Def": 20,
+                "Res": 5
+            }
+        },
+        "Palla": {
+            "name": "Palla",
+            "join_lv": 10,
+            "default_class": "Pegasus Knight",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 8,
+                "Str": 6,
+                "Mag": 0,
+                "Skl": 6,
+                "Spd": 9,
+                "Lck": 9,
+                "Def": 4,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 50,
+                "Mag": 10,
+                "Skl": 70,
+                "Spd": 5,
+                "Lck": 20,
+                "Def": 20,
+                "Res": 10
+            }
+        },
+        "Bord": {
+            "name": "Bord",
+            "join_lv": 2,
+            "default_class": "Fighter",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 0,
+                "Str": 3,
+                "Mag": 0,
+                "Skl": 5,
+                "Spd": 0,
+                "Lck": 1,
+                "Def": 2,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 25,
+                "Mag": 0,
+                "Skl": 40,
+                "Spd": 20,
+                "Lck": 45,
+                "Def": 15,
+                "Res": 0
+            }
+        },
+        "Julian": {
+            "name": "Julian",
+            "join_lv": 6,
+            "default_class": "Thief",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 4,
+                "Str": 5,
+                "Mag": 0,
+                "Skl": 7,
+                "Spd": 7,
+                "Lck": 7,
+                "Def": 5,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 60,
+                "Mag": 10,
+                "Skl": 30,
+                "Spd": 30,
+                "Lck": 80,
+                "Def": 35,
+                "Res": 10
+            }
+        },
+        "Matthis": {
+            "name": "Matthis",
+            "join_lv": 4,
+            "default_class": "Cavalier",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 3,
+                "Str": 2,
+                "Mag": 0,
+                "Skl": 1,
+                "Spd": 1,
+                "Lck": 1,
+                "Def": 2,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 60,
+                "Str": 35,
+                "Mag": 10,
+                "Skl": 15,
+                "Spd": 20,
+                "Lck": 30,
+                "Def": 15,
+                "Res": 10
+            }
+        },
+        "Wrys": {
+            "name": "Wrys",
+            "join_lv": 3,
+            "default_class": "Curate",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 0,
+                "Str": 0,
+                "Mag": 2,
+                "Skl": 5,
+                "Spd": 3,
+                "Lck": 3,
+                "Def": 0,
+                "Res": 1
+            },
+            "base_growths": {
+                "HP": 10,
+                "Str": 0,
+                "Mag": 20,
+                "Skl": 15,
+                "Spd": 10,
+                "Lck": 50,
+                "Def": 15,
+                "Res": 20
+            }
+        },
+        "Ogma": {
+            "name": "Ogma",
+            "join_lv": 7,
+            "default_class": "Mercenary",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 9,
+                "Str": 4,
+                "Mag": 0,
+                "Skl": 6,
+                "Spd": 4,
+                "Lck": 5,
+                "Def": 3,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 40,
+                "Mag": 0,
+                "Skl": 30,
+                "Spd": 30,
+                "Lck": 60,
+                "Def": 15,
+                "Res": 15
+            }
+        },
+        "Yumina": {
+            "name": "Yumina",
+            "join_lv": 2,
+            "default_class": "Cleric",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 0,
+                "Str": 0,
+                "Mag": 1,
+                "Skl": 0,
+                "Spd": 4,
+                "Lck": 9,
+                "Def": 1,
+                "Res": -3
+            },
+            "base_growths": {
+                "HP": 20,
+                "Str": 0,
+                "Mag": 20,
+                "Skl": 30,
+                "Spd": 40,
+                "Lck": 50,
+                "Def": 30,
+                "Res": 10
+            }
+        },
+        "Yubello": {
+            "name": "Yubello",
+            "join_lv": 1,
+            "default_class": "Mage",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 2,
+                "Str": 0,
+                "Mag": -2,
+                "Skl": 0,
+                "Spd": 3,
+                "Lck": 5,
+                "Def": 1,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 0,
+                "Mag": 20,
+                "Skl": 20,
+                "Spd": 35,
+                "Lck": 50,
+                "Def": 35,
+                "Res": 10
+            }
+        },
+        "Sirius": {
+            "name": "Sirius",
+            "join_lv": 1,
+            "default_class": "Paladin",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 6,
+                "Str": 5,
+                "Mag": 0,
+                "Skl": 9,
+                "Spd": 6,
+                "Lck": 4,
+                "Def": 3,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 55,
+                "Str": 50,
+                "Mag": 10,
+                "Skl": 35,
+                "Spd": 40,
+                "Lck": 60,
+                "Def": 35,
+                "Res": 10
+            }
+        },
+        "Castor": {
+            "name": "Castor",
+            "join_lv": 7,
+            "default_class": "Hunter",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 6,
+                "Str": 4,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 4,
+                "Lck": 4,
+                "Def": 3,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 30,
+                "Mag": 10,
+                "Skl": 35,
+                "Spd": 25,
+                "Lck": 30,
+                "Def": 10,
+                "Res": 5
+            }
+        },
+        "Shiida": {
+            "name": "Shiida",
+            "join_lv": 4,
+            "default_class": "Pegasus Knight",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 3,
+                "Str": 2,
+                "Mag": 0,
+                "Skl": 2,
+                "Spd": 8,
+                "Lck": 13,
+                "Def": 2,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 20,
+                "Mag": 10,
+                "Skl": 60,
+                "Spd": 70,
+                "Lck": 80,
+                "Def": 15,
+                "Res": 10
+            }
+        },
+        "Barst": {
+            "name": "Barst",
+            "join_lv": 5,
+            "default_class": "Fighter",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 4,
+                "Str": 5,
+                "Mag": 0,
+                "Skl": 7,
+                "Spd": 5,
+                "Lck": 6,
+                "Def": 4,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 30,
+                "Mag": 0,
+                "Skl": 35,
+                "Spd": 30,
+                "Lck": 50,
+                "Def": 20,
+                "Res": 0
+            }
+        },
+        "Rickard": {
+            "name": "Rickard",
+            "join_lv": 3,
+            "default_class": "Thief",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 2,
+                "Str": 4,
+                "Mag": 0,
+                "Skl": 2,
+                "Spd": 2,
+                "Lck": 1,
+                "Def": 2,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 30,
+                "Mag": 0,
+                "Skl": 0,
+                "Spd": 30,
+                "Lck": 60,
+                "Def": 25,
+                "Res": 10
+            }
+        },
+        "Frey": {
+            "name": "Frey",
+            "join_lv": 8,
+            "default_class": "Cavalier",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 8,
+                "Str": 6,
+                "Mag": 0,
+                "Skl": 6,
+                "Spd": 4,
+                "Lck": 6,
+                "Def": 3,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 30,
+                "Mag": 5,
+                "Skl": 40,
+                "Spd": 55,
+                "Lck": 55,
+                "Def": 25,
+                "Res": 10
+            }
+        },
+        "Norne": {
+            "name": "Norne",
+            "join_lv": 5,
+            "default_class": "Archer",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 4,
+                "Str": 3,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 5,
+                "Lck": 6,
+                "Def": 1,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 25,
+                "Mag": 0,
+                "Skl": 30,
+                "Spd": 35,
+                "Lck": 50,
+                "Def": 20,
+                "Res": 10
+            }
+        },
+        "Samto": {
+            "name": "Samto",
+            "join_lv": 5,
+            "default_class": "Myrmidon",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 6,
+                "Str": 3,
+                "Mag": 0,
+                "Skl": 1,
+                "Spd": 0,
+                "Lck": 3,
+                "Def": 3,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 20,
+                "Mag": 0,
+                "Skl": 10,
+                "Spd": 40,
+                "Lck": 30,
+                "Def": 15,
+                "Res": 5
+            }
+        },
+        "Wendell": {
+            "name": "Wendell",
+            "join_lv": 7,
+            "default_class": "Sage",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 4,
+                "Str": 0,
+                "Mag": 3,
+                "Skl": 3,
+                "Spd": 9,
+                "Lck": 4,
+                "Def": 2,
+                "Res": 1
+            },
+            "base_growths": {
+                "HP": 20,
+                "Str": 10,
+                "Mag": 0,
+                "Skl": 20,
+                "Spd": 10,
+                "Lck": 50,
+                "Def": 35,
+                "Res": 5
+            }
+        },
+        "Caesar": {
+            "name": "Caesar",
+            "join_lv": 7,
+            "default_class": "Mercenary",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 8,
+                "Str": 4,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 2,
+                "Lck": 6,
+                "Def": 3,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 30,
+                "Mag": 10,
+                "Skl": 20,
+                "Spd": 35,
+                "Lck": 30,
+                "Def": 15,
+                "Res": 10
+            }
+        },
+        "Radd": {
+            "name": "Radd",
+            "join_lv": 5,
+            "default_class": "Myrmidon",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 6,
+                "Str": 2,
+                "Mag": 0,
+                "Skl": 1,
+                "Spd": 2,
+                "Lck": 1,
+                "Def": 1,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 40,
+                "Mag": 0,
+                "Skl": 25,
+                "Spd": 35,
+                "Lck": 50,
+                "Def": 15,
+                "Res": 10
+            }
+        },
+        "Nabarl": {
+            "name": "Nabarl",
+            "join_lv": 8,
+            "default_class": "Myrmidon",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 7,
+                "Str": 6,
+                "Mag": 0,
+                "Skl": 7,
+                "Spd": 5,
+                "Lck": 7,
+                "Def": 4,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 35,
+                "Mag": 0,
+                "Skl": 30,
+                "Spd": 40,
+                "Lck": 70,
+                "Def": 15,
+                "Res": 10
+            }
+        },
+        "Feena": {
+            "name": "Feena",
+            "join_lv": 1,
+            "default_class": "Dancer",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 0,
+                "Str": 1,
+                "Mag": 0,
+                "Skl": 1,
+                "Spd": 5,
+                "Lck": 8,
+                "Def": 2,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 50,
+                "Mag": 10,
+                "Skl": 50,
+                "Spd": 50,
+                "Lck": 80,
+                "Def": 10,
+                "Res": 15
+            }
+        },
+        "Cain": {
+            "name": "Cain",
+            "join_lv": 9,
+            "default_class": "Cavalier",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 9,
+                "Str": 6,
+                "Mag": 0,
+                "Skl": 7,
+                "Spd": 4,
+                "Lck": 4,
+                "Def": 4,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 25,
+                "Mag": 0,
+                "Skl": 45,
+                "Spd": 60,
+                "Lck": 70,
+                "Def": 20,
+                "Res": 10
+            }
+        },
+        "Bantu": {
+            "name": "Bantu",
+            "join_lv": 3,
+            "default_class": "Manakete",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 0,
+                "Str": 2,
+                "Mag": 0,
+                "Skl": 2,
+                "Spd": 3,
+                "Lck": 1,
+                "Def": 2,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": -10,
+                "Str": 0,
+                "Mag": 0,
+                "Skl": -10,
+                "Spd": -10,
+                "Lck": 10,
+                "Def": 0,
+                "Res": 15
+            }
+        },
+        "Roger": {
+            "name": "Roger",
+            "join_lv": 8,
+            "default_class": "Knight",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 8,
+                "Str": 4,
+                "Mag": 0,
+                "Skl": 4,
+                "Spd": 7,
+                "Lck": 5,
+                "Def": 3,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 20,
+                "Str": 45,
+                "Mag": 0,
+                "Skl": 30,
+                "Spd": 40,
+                "Lck": 70,
+                "Def": 25,
+                "Res": 10
+            }
+        },
+        "Jeorge": {
+            "name": "Jeorge",
+            "join_lv": 5,
+            "default_class": "Sniper",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 8,
+                "Str": 5,
+                "Mag": 0,
+                "Skl": 6,
+                "Spd": 5,
+                "Lck": 5,
+                "Def": 6,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 30,
+                "Mag": 0,
+                "Skl": 15,
+                "Spd": 15,
+                "Lck": 50,
+                "Def": 30,
+                "Res": 10
+            }
+        },
+        "Minerva": {
+            "name": "Minerva",
+            "join_lv": 4,
+            "default_class": "Dracoknight",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 12,
+                "Str": 5,
+                "Mag": 0,
+                "Skl": 7,
+                "Spd": 8,
+                "Lck": 11,
+                "Def": 6,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 40,
+                "Mag": 0,
+                "Skl": 40,
+                "Spd": 25,
+                "Lck": 60,
+                "Def": 20,
+                "Res": 5
+            }
+        },
+        "Etzel": {
+            "name": "Etzel",
+            "join_lv": 6,
+            "default_class": "Sorcerer",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 8,
+                "Str": 0,
+                "Mag": 7,
+                "Skl": 12,
+                "Spd": 8,
+                "Lck": 8,
+                "Def": 6,
+                "Res": 6
+            },
+            "base_growths": {
+                "HP": 60,
+                "Str": 0,
+                "Mag": 20,
+                "Skl": 40,
+                "Spd": 30,
+                "Lck": 40,
+                "Def": 45,
+                "Res": 20
+            }
+        },
+        "Merric": {
+            "name": "Merric",
+            "join_lv": 10,
+            "default_class": "Mage",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 8,
+                "Str": 0,
+                "Mag": 4,
+                "Skl": 5,
+                "Spd": 7,
+                "Lck": 6,
+                "Def": 5,
+                "Res": 2
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 0,
+                "Mag": 10,
+                "Skl": 45,
+                "Spd": 50,
+                "Lck": 70,
+                "Def": 30,
+                "Res": 5
+            }
+        },
+        "Ellerean": {
+            "name": "Ellerean",
+            "join_lv": 10,
+            "default_class": "Mage",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 10,
+                "Str": 1,
+                "Mag": 5,
+                "Skl": 4,
+                "Spd": 8,
+                "Lck": 2,
+                "Def": 6,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 60,
+                "Str": 0,
+                "Mag": 10,
+                "Skl": 30,
+                "Spd": 30,
+                "Lck": 30,
+                "Def": 40,
+                "Res": 0
+            }
+        },
+        "Dice": {
+            "name": "Dice",
+            "join_lv": 12,
+            "default_class": "Fighter",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 10,
+                "Str": 8,
+                "Mag": 0,
+                "Skl": 4,
+                "Spd": 5,
+                "Lck": 6,
+                "Def": 5,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 20,
+                "Str": 20,
+                "Mag": 0,
+                "Skl": 20,
+                "Spd": 30,
+                "Lck": 40,
+                "Def": 10,
+                "Res": 20
+            }
+        },
+        "Maris": {
+            "name": "Maris",
+            "join_lv": 10,
+            "default_class": "Myrmidon",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 9,
+                "Str": 6,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 5,
+                "Lck": 9,
+                "Def": 6,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 30,
+                "Mag": 15,
+                "Skl": 40,
+                "Spd": 30,
+                "Lck": 50,
+                "Def": 0,
+                "Res": 15
+            }
+        },
+        "Horace": {
+            "name": "Horace",
+            "join_lv": 3,
+            "default_class": "General",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 6,
+                "Str": 7,
+                "Mag": 0,
+                "Skl": 8,
+                "Spd": 6,
+                "Lck": 7,
+                "Def": 2,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 40,
+                "Mag": 0,
+                "Skl": 25,
+                "Spd": 30,
+                "Lck": 35,
+                "Def": 40,
+                "Res": 10
+            }
+        },
+        "Jake": {
+            "name": "Jake",
+            "join_lv": 1,
+            "default_class": "Warrior",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 7,
+                "Str": 3,
+                "Mag": 0,
+                "Skl": 4,
+                "Spd": 4,
+                "Lck": 12,
+                "Def": 3,
+                "Res": 2
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 50,
+                "Mag": 10,
+                "Skl": 40,
+                "Spd": 70,
+                "Lck": 70,
+                "Def": 30,
+                "Res": 20
+            }
+        },
+        "Darros": {
+            "name": "Darros",
+            "join_lv": 3,
+            "default_class": "Berserker",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 17,
+                "Str": 9,
+                "Mag": 0,
+                "Skl": 8,
+                "Spd": 6,
+                "Lck": 9,
+                "Def": 7,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 35,
+                "Mag": 0,
+                "Skl": 25,
+                "Spd": 20,
+                "Lck": 40,
+                "Def": 30,
+                "Res": 0
+            }
+        },
+        "Robert": {
+            "name": "Robert",
+            "join_lv": 3,
+            "default_class": "Horseman",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 12,
+                "Str": 5,
+                "Mag": 0,
+                "Skl": 8,
+                "Spd": 7,
+                "Lck": 12,
+                "Def": 2,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 40,
+                "Mag": 0,
+                "Skl": 50,
+                "Spd": 40,
+                "Lck": 50,
+                "Def": 15,
+                "Res": 20
+            }
+        },
+        "Belf": {
+            "name": "Belf",
+            "join_lv": 15,
+            "default_class": "Cavalier",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 17,
+                "Str": 9,
+                "Mag": 0,
+                "Skl": 13,
+                "Spd": 6,
+                "Lck": 8,
+                "Def": 5,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 40,
+                "Mag": 0,
+                "Skl": 30,
+                "Spd": 30,
+                "Lck": 40,
+                "Def": 10,
+                "Res": 0
+            }
+        },
+        "Leiden": {
+            "name": "Leiden",
+            "join_lv": 15,
+            "default_class": "Cavalier",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 16,
+                "Str": 7,
+                "Mag": 0,
+                "Skl": 12,
+                "Spd": 9,
+                "Lck": 10,
+                "Def": 4,
+                "Res": 1
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 35,
+                "Mag": 0,
+                "Skl": 40,
+                "Spd": 40,
+                "Lck": 40,
+                "Def": 5,
+                "Res": 10
+            }
+        },
+        "Beck": {
+            "name": "Beck",
+            "join_lv": 5,
+            "default_class": "Horseman",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 12,
+                "Str": 6,
+                "Mag": 2,
+                "Skl": 5,
+                "Spd": 6,
+                "Lck": 8,
+                "Def": 4,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 30,
+                "Mag": 20,
+                "Skl": 40,
+                "Spd": 40,
+                "Lck": 30,
+                "Def": 30,
+                "Res": 5
+            }
+        },
+        "Athena": {
+            "name": "Athena",
+            "join_lv": 10,
+            "default_class": "Myrmidon",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 9,
+                "Str": 6,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 2,
+                "Lck": 6,
+                "Def": 3,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 35,
+                "Str": 30,
+                "Mag": 5,
+                "Skl": 40,
+                "Spd": 40,
+                "Lck": 65,
+                "Def": 20,
+                "Res": 15
+            }
+        },
+        "Xane": {
+            "name": "Xane",
+            "join_lv": 5,
+            "default_class": "Chameleon",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 4,
+                "Str": 2,
+                "Mag": 0,
+                "Skl": 2,
+                "Spd": 5,
+                "Lck": 10,
+                "Def": 2,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 20,
+                "Str": 10,
+                "Mag": 10,
+                "Skl": -10,
+                "Spd": 20,
+                "Lck": 40,
+                "Def": 15,
+                "Res": 20
+            }
+        },
+        "Tiki": {
+            "name": "Tiki",
+            "join_lv": 6,
+            "default_class": "Manakete",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 0,
+                "Str": 6,
+                "Mag": 0,
+                "Skl": 5,
+                "Spd": 5,
+                "Lck": 13,
+                "Def": 4,
+                "Res": 9
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 30,
+                "Mag": 10,
+                "Skl": 50,
+                "Spd": 60,
+                "Lck": 90,
+                "Def": 10,
+                "Res": 15
+            }
+        },
+        "Est": {
+            "name": "Est",
+            "join_lv": 5,
+            "default_class": "Pegasus Knight",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 4,
+                "Str": 2,
+                "Mag": 0,
+                "Skl": 2,
+                "Spd": 6,
+                "Lck": 11,
+                "Def": 3,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 70,
+                "Mag": 10,
+                "Skl": 60,
+                "Spd": 55,
+                "Lck": 70,
+                "Def": 20,
+                "Res": 10
+            }
+        },
+        "Dolph": {
+            "name": "Dolph",
+            "join_lv": 5,
+            "default_class": "General",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 10,
+                "Str": 7,
+                "Mag": 0,
+                "Skl": 9,
+                "Spd": 7,
+                "Lck": 5,
+                "Def": 3,
+                "Res": 2
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 45,
+                "Mag": 0,
+                "Skl": 40,
+                "Spd": 20,
+                "Lck": 40,
+                "Def": 25,
+                "Res": 5
+            }
+        },
+        "Abel": {
+            "name": "Abel",
+            "join_lv": 1,
+            "default_class": "Paladin",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 10,
+                "Str": 6,
+                "Mag": 0,
+                "Skl": 9,
+                "Spd": 8,
+                "Lck": 7,
+                "Def": 6,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 60,
+                "Str": 45,
+                "Mag": 0,
+                "Skl": 35,
+                "Spd": 50,
+                "Lck": 40,
+                "Def": 25,
+                "Res": 10
+            }
+        },
+        "Macellan": {
+            "name": "Macellan",
+            "join_lv": 1,
+            "default_class": "General",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 7,
+                "Str": 4,
+                "Mag": 0,
+                "Skl": 7,
+                "Spd": 6,
+                "Lck": 7,
+                "Def": 0,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 60,
+                "Mag": 5,
+                "Skl": 30,
+                "Spd": 40,
+                "Lck": 50,
+                "Def": 40,
+                "Res": 15
+            }
+        },
+        "Astram": {
+            "name": "Astram",
+            "join_lv": 5,
+            "default_class": "Hero",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 10,
+                "Str": 8,
+                "Mag": 0,
+                "Skl": 6,
+                "Spd": 5,
+                "Lck": 5,
+                "Def": 8,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 40,
+                "Mag": 0,
+                "Skl": 25,
+                "Spd": 20,
+                "Lck": 60,
+                "Def": 15,
+                "Res": 5
+            }
+        },
+        "Katarina": {
+            "name": "Katarina",
+            "join_lv": 7,
+            "default_class": "Sage",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 12,
+                "Str": 0,
+                "Mag": 7,
+                "Skl": 13,
+                "Spd": 11,
+                "Lck": 6,
+                "Def": 6,
+                "Res": 2
+            },
+            "base_growths": {
+                "HP": 60,
+                "Str": 0,
+                "Mag": 20,
+                "Skl": 50,
+                "Spd": 55,
+                "Lck": 70,
+                "Def": 35,
+                "Res": 20
+            }
+        },
+        "Tomas": {
+            "name": "Tomas",
+            "join_lv": 1,
+            "default_class": "Sniper",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 5,
+                "Str": 5,
+                "Mag": 0,
+                "Skl": 2,
+                "Spd": 4,
+                "Lck": 9,
+                "Def": 5,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 55,
+                "Mag": 0,
+                "Skl": 50,
+                "Spd": 40,
+                "Lck": 50,
+                "Def": 20,
+                "Res": 15
+            }
+        },
+        "Sheema": {
+            "name": "Sheema",
+            "join_lv": 1,
+            "default_class": "General",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 4,
+                "Str": 3,
+                "Mag": 0,
+                "Skl": 9,
+                "Spd": 4,
+                "Lck": 9,
+                "Def": 2,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 20,
+                "Str": 55,
+                "Mag": 0,
+                "Skl": 45,
+                "Spd": 60,
+                "Lck": 80,
+                "Def": 10,
+                "Res": 20
+            }
+        },
+        "Samson": {
+            "name": "Samson",
+            "join_lv": 5,
+            "default_class": "Hero",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 10,
+                "Str": 8,
+                "Mag": 0,
+                "Skl": 5,
+                "Spd": 7,
+                "Lck": 11,
+                "Def": 6,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 30,
+                "Mag": 0,
+                "Skl": 10,
+                "Spd": 10,
+                "Lck": 70,
+                "Def": 25,
+                "Res": 5
+            }
+        },
+        "Frost": {
+            "name": "Frost",
+            "join_lv": 5,
+            "default_class": "Bishop",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 4,
+                "Str": 2,
+                "Mag": 6,
+                "Skl": 8,
+                "Spd": 10,
+                "Lck": 4,
+                "Def": 2,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 15,
+                "Mag": 20,
+                "Skl": 30,
+                "Spd": 30,
+                "Lck": 20,
+                "Def": 20,
+                "Res": 10
+            }
+        },
+        "Roshea": {
+            "name": "Roshea",
+            "join_lv": 8,
+            "default_class": "Paladin",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 14,
+                "Str": 6,
+                "Mag": 0,
+                "Skl": 10,
+                "Spd": 7,
+                "Lck": 10,
+                "Def": 4,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 55,
+                "Str": 35,
+                "Mag": 0,
+                "Skl": 35,
+                "Spd": 40,
+                "Lck": 70,
+                "Def": 25,
+                "Res": 15
+            }
+        },
+        "Vyland": {
+            "name": "Vyland",
+            "join_lv": 8,
+            "default_class": "Paladin",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 15,
+                "Str": 7,
+                "Mag": 0,
+                "Skl": 8,
+                "Spd": 5,
+                "Lck": 7,
+                "Def": 7,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 45,
+                "Mag": 0,
+                "Skl": 20,
+                "Spd": 50,
+                "Lck": 50,
+                "Def": 35,
+                "Res": 5
+            }
+        },
+        "Sedgar": {
+            "name": "Sedgar",
+            "join_lv": 10,
+            "default_class": "Horseman",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 15,
+                "Str": 7,
+                "Mag": 0,
+                "Skl": 10,
+                "Spd": 6,
+                "Lck": 8,
+                "Def": 7,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 40,
+                "Mag": 5,
+                "Skl": 50,
+                "Spd": 45,
+                "Lck": 40,
+                "Def": 40,
+                "Res": 10
+            }
+        },
+        "Wolf": {
+            "name": "Wolf",
+            "join_lv": 12,
+            "default_class": "Horseman",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 16,
+                "Str": 9,
+                "Mag": 0,
+                "Skl": 11,
+                "Spd": 8,
+                "Lck": 11,
+                "Def": 8,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 50,
+                "Mag": 5,
+                "Skl": 40,
+                "Spd": 45,
+                "Lck": 60,
+                "Def": 30,
+                "Res": 5
+            }
+        },
+        "Midia": {
+            "name": "Midia",
+            "join_lv": 12,
+            "default_class": "Paladin",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 13,
+                "Str": 8,
+                "Mag": 0,
+                "Skl": 14,
+                "Spd": 11,
+                "Lck": 9,
+                "Def": 8,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 25,
+                "Mag": 0,
+                "Skl": 35,
+                "Spd": 50,
+                "Lck": 20,
+                "Def": 30,
+                "Res": 20
+            }
+        },
+        "Ymir": {
+            "name": "Ymir",
+            "join_lv": 10,
+            "default_class": "Warrior",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 20,
+                "Str": 11,
+                "Mag": 0,
+                "Skl": 9,
+                "Spd": 8,
+                "Lck": 5,
+                "Def": 6,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 20,
+                "Str": 50,
+                "Mag": 0,
+                "Skl": 20,
+                "Spd": 40,
+                "Lck": 35,
+                "Def": 30,
+                "Res": 0
+            }
+        },
+        "Michalis": {
+            "name": "Michalis",
+            "join_lv": 12,
+            "default_class": "Dracoknight",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 22,
+                "Str": 11,
+                "Mag": 0,
+                "Skl": 17,
+                "Spd": 15,
+                "Lck": 2,
+                "Def": 10,
+                "Res": 2
+            },
+            "base_growths": {
+                "HP": 60,
+                "Str": 50,
+                "Mag": 0,
+                "Skl": 40,
+                "Spd": 30,
+                "Lck": 20,
+                "Def": 30,
+                "Res": 10
+            }
+        },
+        "Nagi": {
+            "name": "Nagi",
+            "join_lv": 15,
+            "default_class": "Manakete",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 14,
+                "Str": 8,
+                "Mag": 2,
+                "Skl": 11,
+                "Spd": 13,
+                "Lck": 10,
+                "Def": 5,
+                "Res": 9
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 30,
+                "Mag": 10,
+                "Skl": 50,
+                "Spd": 60,
+                "Lck": 90,
+                "Def": 10,
+                "Res": 15
+            }
+        },
+        "Lena": {
+            "name": "Lena",
+            "join_lv": 3,
+            "default_class": "Bishop",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 5,
+                "Str": 0,
+                "Mag": 5,
+                "Skl": 6,
+                "Spd": 9,
+                "Lck": 10,
+                "Def": 3,
+                "Res": 2
+            },
+            "base_growths": {
+                "HP": 15,
+                "Str": 0,
+                "Mag": 25,
+                "Skl": 20,
+                "Spd": 10,
+                "Lck": 60,
+                "Def": 25,
+                "Res": 20
+            }
+        },
+        "Maria": {
+            "name": "Maria",
+            "join_lv": 1,
+            "default_class": "Bishop",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 2,
+                "Str": 0,
+                "Mag": 2,
+                "Skl": 3,
+                "Spd": 1,
+                "Lck": 8,
+                "Def": 0,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 15,
+                "Str": 0,
+                "Mag": 20,
+                "Skl": 20,
+                "Spd": 15,
+                "Lck": 75,
+                "Def": 20,
+                "Res": 20
+            }
+        },
+        "Nyna": {
+            "name": "Nyna",
+            "join_lv": 7,
+            "default_class": "Bishop",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 3,
+                "Str": 0,
+                "Mag": 3,
+                "Skl": 4,
+                "Spd": 6,
+                "Lck": 18,
+                "Def": 1,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 25,
+                "Str": 0,
+                "Mag": 20,
+                "Skl": 30,
+                "Spd": 25,
+                "Lck": 45,
+                "Def": 25,
+                "Res": 20
+            }
+        },
+        "Elice": {
+            "name": "Elice",
+            "join_lv": 5,
+            "default_class": "Bishop",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 4,
+                "Str": 0,
+                "Mag": 4,
+                "Skl": 5,
+                "Spd": 3,
+                "Lck": 7,
+                "Def": 2,
+                "Res": 1
+            },
+            "base_growths": {
+                "HP": 40,
+                "Str": 0,
+                "Mag": 30,
+                "Skl": 45,
+                "Spd": 50,
+                "Lck": 80,
+                "Def": 35,
+                "Res": 0
+            }
+        },
+        "Boah": {
+            "name": "Boah",
+            "join_lv": 3,
+            "default_class": "Bishop",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 0,
+                "Str": 0,
+                "Mag": 3,
+                "Skl": 5,
+                "Spd": 6,
+                "Lck": 4,
+                "Def": 2,
+                "Res": -3
+            },
+            "base_growths": {
+                "HP": -10,
+                "Str": 0,
+                "Mag": 0,
+                "Skl": 0,
+                "Spd": 0,
+                "Lck": 20,
+                "Def": 0,
+                "Res": 10
+            }
+        },
+        "Hardin": {
+            "name": "Hardin",
+            "join_lv": 8,
+            "default_class": "Cavalier",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 10,
+                "Str": 5,
+                "Mag": 0,
+                "Skl": 7,
+                "Spd": 5,
+                "Lck": 5,
+                "Def": 5,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 60,
+                "Mag": 0,
+                "Skl": 40,
+                "Spd": 55,
+                "Lck": 30,
+                "Def": 30,
+                "Res": 5
+            }
+        },
+        "Nabarl (BS 3)": {
+            "name": "Nabarl (BS 3)",
+            "join_lv": 3,
+            "default_class": "Myrmidon",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 5,
+                "Str": 5,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 1,
+                "Lck": 5,
+                "Def": 2,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 50,
+                "Str": 35,
+                "Mag": 0,
+                "Skl": 30,
+                "Spd": 40,
+                "Lck": 70,
+                "Def": 15,
+                "Res": 10
+            }
+        },
+        "Maris (BS 3)": {
+            "name": "Maris (BS 3)",
+            "join_lv": 8,
+            "default_class": "Myrmidon",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 8,
+                "Str": 5,
+                "Mag": 0,
+                "Skl": 2,
+                "Spd": 3,
+                "Lck": 7,
+                "Def": 5,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 30,
+                "Str": 30,
+                "Mag": 15,
+                "Skl": 40,
+                "Spd": 30,
+                "Lck": 50,
+                "Def": 0,
+                "Res": 15
+            }
+        },
+        "Dice (BS 3)": {
+            "name": "Dice (BS 3)",
+            "join_lv": 10,
+            "default_class": "Fighter",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 8,
+                "Str": 6,
+                "Mag": 0,
+                "Skl": 4,
+                "Spd": 4,
+                "Lck": 5,
+                "Def": 4,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 20,
+                "Str": 20,
+                "Mag": 0,
+                "Skl": 20,
+                "Spd": 30,
+                "Lck": 40,
+                "Def": 10,
+                "Res": 20
+            }
+        },
+        "Camus": {
+            "name": "Camus",
+            "join_lv": 10,
+            "default_class": "Paladin",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 20,
+                "Str": 7,
+                "Mag": 0,
+                "Skl": 10,
+                "Spd": 9,
+                "Lck": 10,
+                "Def": 6,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 55,
+                "Str": 50,
+                "Mag": 10,
+                "Skl": 35,
+                "Spd": 40,
+                "Lck": 60,
+                "Def": 35,
+                "Res": 10
+            }
+        },
+        "Kleine": {
+            "name": "Kleine",
+            "join_lv": 5,
+            "default_class": "Sniper",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 8,
+                "Str": 4,
+                "Mag": 0,
+                "Skl": 6,
+                "Spd": 6,
+                "Lck": 0,
+                "Def": 5,
+                "Res": 1
+            },
+            "base_growths": {
+                "HP": 0,
+                "Str": 0,
+                "Mag": 0,
+                "Skl": 0,
+                "Spd": 0,
+                "Lck": 0,
+                "Def": 0,
+                "Res": 0
+            }
+        },
+        "Roro": {
+            "name": "Roro",
+            "join_lv": 5,
+            "default_class": "Berserker",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 12,
+                "Str": 4,
+                "Mag": 0,
+                "Skl": 8,
+                "Spd": 3,
+                "Lck": 0,
+                "Def": 3,
+                "Res": 0
+            },
+            "base_growths": {
+                "HP": 0,
+                "Str": 0,
+                "Mag": 0,
+                "Skl": 0,
+                "Spd": 0,
+                "Lck": 0,
+                "Def": 0,
+                "Res": 0
+            }
+        },
+        "Eremiya": {
+            "name": "Eremiya",
+            "join_lv": 18,
+            "default_class": "Bishop",
+            "is_female": true,
+            "absolute_bases": {
+                "HP": 16,
+                "Str": 0,
+                "Mag": 9,
+                "Skl": 11,
+                "Spd": 13,
+                "Lck": 0,
+                "Def": 9,
+                "Res": 7
+            },
+            "base_growths": {
+                "HP": 0,
+                "Str": 0,
+                "Mag": 0,
+                "Skl": 0,
+                "Spd": 0,
+                "Lck": 0,
+                "Def": 0,
+                "Res": 0
+            }
+        },
+        "Gharnef": {
+            "name": "Gharnef",
+            "join_lv": 20,
+            "default_class": "Sorcerer",
+            "is_female": false,
+            "absolute_bases": {
+                "HP": 16,
+                "Str": 0,
+                "Mag": 8,
+                "Skl": 14,
+                "Spd": 11,
+                "Lck": 0,
+                "Def": 9,
+                "Res": 11
+            },
+            "base_growths": {
+                "HP": 0,
+                "Str": 0,
+                "Mag": 0,
+                "Skl": 0,
+                "Spd": 0,
+                "Lck": 0,
+                "Def": 0,
+                "Res": 0
+            }
+        }
+    },
+    "classes": {
+        "bases": {
+            "Lord": {
+                "HP": 18,
+                "Str": 5,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 7,
+                "Lck": 0,
+                "Def": 7,
+                "Res": 0
+            },
+            "Pegasus Knight": {
+                "HP": 16,
+                "Str": 4,
+                "Mag": 2,
+                "Skl": 5,
+                "Spd": 7,
+                "Lck": 0,
+                "Def": 5,
+                "Res": 6
+            },
+            "Falcon Knight": {
+                "HP": 20,
+                "Str": 6,
+                "Mag": 3,
+                "Skl": 7,
+                "Spd": 9,
+                "Lck": 0,
+                "Def": 7,
+                "Res": 9
+            },
+            "Dracoknight": {
+                "HP": 20,
+                "Str": 8,
+                "Mag": 1,
+                "Skl": 5,
+                "Spd": 7,
+                "Lck": 0,
+                "Def": 10,
+                "Res": 3
+            },
+            "Cavalier": {
+                "HP": 18,
+                "Str": 5,
+                "Mag": 0,
+                "Skl": 2,
+                "Spd": 6,
+                "Lck": 0,
+                "Def": 7,
+                "Res": 0
+            },
+            "Paladin": {
+                "HP": 22,
+                "Str": 7,
+                "Mag": 1,
+                "Skl": 5,
+                "Spd": 7,
+                "Lck": 0,
+                "Def": 8,
+                "Res": 6
+            },
+            "Knight": {
+                "HP": 18,
+                "Str": 6,
+                "Mag": 0,
+                "Skl": 2,
+                "Spd": 0,
+                "Lck": 0,
+                "Def": 11,
+                "Res": 0
+            },
+            "General": {
+                "HP": 28,
+                "Str": 8,
+                "Mag": 1,
+                "Skl": 3,
+                "Spd": 4,
+                "Lck": 0,
+                "Def": 15,
+                "Res": 3
+            },
+            "Archer": {
+                "HP": 16,
+                "Str": 5,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 4,
+                "Lck": 0,
+                "Def": 6,
+                "Res": 0
+            },
+            "Sniper": {
+                "HP": 24,
+                "Str": 7,
+                "Mag": 1,
+                "Skl": 8,
+                "Spd": 9,
+                "Lck": 0,
+                "Def": 7,
+                "Res": 3
+            },
+            "Mercenary": {
+                "HP": 18,
+                "Str": 4,
+                "Mag": 0,
+                "Skl": 8,
+                "Spd": 9,
+                "Lck": 0,
+                "Def": 5,
+                "Res": 0
+            },
+            "Hero": {
+                "HP": 24,
+                "Str": 6,
+                "Mag": 1,
+                "Skl": 10,
+                "Spd": 11,
+                "Lck": 0,
+                "Def": 7,
+                "Res": 3
+            },
+            "Myrmidon": {
+                "HP": 16,
+                "Str": 3,
+                "Mag": 0,
+                "Skl": 9,
+                "Spd": 11,
+                "Lck": 0,
+                "Def": 4,
+                "Res": 0
+            },
+            "Swordmaster": {
+                "HP": 22,
+                "Str": 5,
+                "Mag": 1,
+                "Skl": 11,
+                "Spd": 13,
+                "Lck": 0,
+                "Def": 6,
+                "Res": 3
+            },
+            "Fighter": {
+                "HP": 22,
+                "Str": 7,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 6,
+                "Lck": 0,
+                "Def": 3,
+                "Res": 0
+            },
+            "Warrior": {
+                "HP": 28,
+                "Str": 9,
+                "Mag": 0,
+                "Skl": 4,
+                "Spd": 7,
+                "Lck": 0,
+                "Def": 5,
+                "Res": 1
+            },
+            "Hunter": {
+                "HP": 18,
+                "Str": 6,
+                "Mag": 0,
+                "Skl": 4,
+                "Spd": 6,
+                "Lck": 0,
+                "Def": 3,
+                "Res": 0
+            },
+            "Horseman": {
+                "HP": 20,
+                "Str": 6,
+                "Mag": 1,
+                "Skl": 6,
+                "Spd": 8,
+                "Lck": 0,
+                "Def": 6,
+                "Res": 3
+            },
+            "Barbarian": {
+                "HP": 18,
+                "Str": 7,
+                "Mag": 0,
+                "Skl": 1,
+                "Spd": 8,
+                "Lck": 0,
+                "Def": 4,
+                "Res": 0
+            },
+            "Pirate": {
+                "HP": 18,
+                "Str": 7,
+                "Mag": 0,
+                "Skl": 1,
+                "Spd": 8,
+                "Lck": 0,
+                "Def": 4,
+                "Res": 0
+            },
+            "Berserker": {
+                "HP": 24,
+                "Str": 9,
+                "Mag": 0,
+                "Skl": 2,
+                "Spd": 9,
+                "Lck": 0,
+                "Def": 6,
+                "Res": 0
+            },
+            "Dark Mage": {
+                "HP": 16,
+                "Str": 0,
+                "Mag": 2,
+                "Skl": 1,
+                "Spd": 3,
+                "Lck": 0,
+                "Def": 4,
+                "Res": 3
+            },
+            "Sorcerer": {
+                "HP": 22,
+                "Str": 2,
+                "Mag": 4,
+                "Skl": 2,
+                "Spd": 4,
+                "Lck": 0,
+                "Def": 4,
+                "Res": 6
+            },
+            "Mage": {
+                "HP": 16,
+                "Str": 0,
+                "Mag": 3,
+                "Skl": 1,
+                "Spd": 3,
+                "Lck": 0,
+                "Def": 2,
+                "Res": 3
+            },
+            "Sage": {
+                "HP": 22,
+                "Str": 3,
+                "Mag": 5,
+                "Skl": 2,
+                "Spd": 4,
+                "Lck": 0,
+                "Def": 3,
+                "Res": 5
+            },
+            "Curate": {
+                "HP": 16,
+                "Str": 0,
+                "Mag": 1,
+                "Skl": 1,
+                "Spd": 4,
+                "Lck": 0,
+                "Def": 3,
+                "Res": 6
+            },
+            "Cleric": {
+                "HP": 16,
+                "Str": 0,
+                "Mag": 1,
+                "Skl": 1,
+                "Spd": 3,
+                "Lck": 0,
+                "Def": 1,
+                "Res": 8
+            },
+            "Bishop": {
+                "HP": 22,
+                "Str": 1,
+                "Mag": 3,
+                "Skl": 2,
+                "Spd": 4,
+                "Lck": 0,
+                "Def": 3,
+                "Res": 9
+            },
+            "Thief": {
+                "HP": 16,
+                "Str": 2,
+                "Mag": 0,
+                "Skl": 1,
+                "Spd": 7,
+                "Lck": 0,
+                "Def": 1,
+                "Res": 0
+            },
+            "Manakete": {
+                "HP": 18,
+                "Str": 0,
+                "Mag": 0,
+                "Skl": 1,
+                "Spd": 1,
+                "Lck": 0,
+                "Def": 1,
+                "Res": 1
+            },
+            "Ballistician": {
+                "HP": 20,
+                "Str": 5,
+                "Mag": 0,
+                "Skl": 1,
+                "Spd": 3,
+                "Lck": 0,
+                "Def": 14,
+                "Res": 0
+            },
+            "Chameleon": {
+                "HP": 16,
+                "Str": 1,
+                "Mag": 0,
+                "Skl": 1,
+                "Spd": 6,
+                "Lck": 0,
+                "Def": 4,
+                "Res": 10
+            },
+            "Dancer": {
+                "HP": 16,
+                "Str": 1,
+                "Mag": 0,
+                "Skl": 1,
+                "Spd": 8,
+                "Lck": 0,
+                "Def": 3,
+                "Res": 0
+            },
+            "Soldier": {
+                "HP": 16,
+                "Str": 3,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 3,
+                "Lck": 0,
+                "Def": 3,
+                "Res": 0
+            },
+            "Emperor": {
+                "HP": 16,
+                "Str": 3,
+                "Mag": 0,
+                "Skl": 3,
+                "Spd": 3,
+                "Lck": 0,
+                "Def": 3,
+                "Res": 0
+            },
+            "Mage Dragon": {
+                "HP": 18,
+                "Str": 0,
+                "Mag": 7,
+                "Skl": 2,
+                "Spd": 0,
+                "Lck": 0,
+                "Def": 12,
+                "Res": 11
+            },
+            "Earth Dragon": {
+                "HP": 18,
+                "Str": 14,
+                "Mag": 0,
+                "Skl": 10,
+                "Spd": 8,
+                "Lck": 0,
+                "Def": 14,
+                "Res": 19
+            },
+            "Fire Dragon": {
+                "HP": 18,
+                "Str": 8,
+                "Mag": 0,
+                "Skl": 5,
+                "Spd": 5,
+                "Lck": 0,
+                "Def": 10,
+                "Res": 5
+            },
+            "Ice Dragon": {
+                "HP": 18,
+                "Str": 5,
+                "Mag": 0,
+                "Skl": 8,
+                "Spd": 5,
+                "Lck": 0,
+                "Def": 14,
+                "Res": 9
+            },
+            "Wyvern": {
+                "HP": 18,
+                "Str": 5,
+                "Mag": 0,
+                "Skl": 5,
+                "Spd": 8,
+                "Lck": 0,
+                "Def": 9,
+                "Res": 4
+            },
+            "Divine Dragon": {
+                "HP": 18,
+                "Str": 10,
+                "Mag": 0,
+                "Skl": 8,
+                "Spd": 5,
+                "Lck": 0,
+                "Def": 16,
+                "Res": 12
+            },
+            "Dark Dragon": {
+                "HP": 18,
+                "Str": 10,
+                "Mag": 0,
+                "Skl": 8,
+                "Spd": 5,
+                "Lck": 0,
+                "Def": 16,
+                "Res": 12
+            }
+        },
+        "growths": {
+            "Lord": {
+                "HP": 40,
+                "Str": 15,
+                "Mag": -10,
+                "Skl": 20,
+                "Spd": 20,
+                "Lck": 0,
+                "Def": 5,
+                "Res": -5
+            },
+            "Peg / Falco / Draco Knight": {
+                "HP": 30,
+                "Str": 10,
+                "Mag": -15,
+                "Skl": 20,
+                "Spd": 25,
+                "Lck": 0,
+                "Def": 10,
+                "Res": 0
+            },
+            "Cavalier / Paladin": {
+                "HP": 40,
+                "Str": 15,
+                "Mag": -10,
+                "Skl": 25,
+                "Spd": 10,
+                "Lck": 0,
+                "Def": 15,
+                "Res": -5
+            },
+            "Knight / General": {
+                "HP": 60,
+                "Str": 15,
+                "Mag": -15,
+                "Skl": 20,
+                "Spd": 0,
+                "Lck": 0,
+                "Def": 30,
+                "Res": -10
+            },
+            "Archer / Sniper": {
+                "HP": 40,
+                "Str": 10,
+                "Mag": -10,
+                "Skl": 20,
+                "Spd": 30,
+                "Lck": 0,
+                "Def": 10,
+                "Res": -10
+            },
+            "Mercenary / Hero": {
+                "HP": 50,
+                "Str": 20,
+                "Mag": -20,
+                "Skl": 25,
+                "Spd": 20,
+                "Lck": 0,
+                "Def": 10,
+                "Res": -10
+            },
+            "Myrmidon / Swordmaster": {
+                "HP": 40,
+                "Str": 10,
+                "Mag": -10,
+                "Skl": 20,
+                "Spd": 30,
+                "Lck": 0,
+                "Def": 5,
+                "Res": -5
+            },
+            "Fighter / Warrior": {
+                "HP": 70,
+                "Str": 40,
+                "Mag": -20,
+                "Skl": 25,
+                "Spd": 10,
+                "Lck": 0,
+                "Def": 5,
+                "Res": -15
+            },
+            "Hunter / Horseman": {
+                "HP": 40,
+                "Str": 20,
+                "Mag": -15,
+                "Skl": 15,
+                "Spd": 25,
+                "Lck": 0,
+                "Def": 5,
+                "Res": -15
+            },
+            "Barbarian": {
+                "HP": 70,
+                "Str": 40,
+                "Mag": -20,
+                "Skl": 15,
+                "Spd": 20,
+                "Lck": 0,
+                "Def": 0,
+                "Res": -15
+            },
+            "Pirate / Berserker": {
+                "HP": 70,
+                "Str": 30,
+                "Mag": -20,
+                "Skl": 15,
+                "Spd": 30,
+                "Lck": 0,
+                "Def": 0,
+                "Res": -15
+            },
+            "Dark Mage / Sorcerer": {
+                "HP": 20,
+                "Str": -15,
+                "Mag": 20,
+                "Skl": 20,
+                "Spd": 20,
+                "Lck": 0,
+                "Def": -15,
+                "Res": 20
+            },
+            "Mage": {
+                "HP": 20,
+                "Str": -10,
+                "Mag": 30,
+                "Skl": 20,
+                "Spd": 15,
+                "Lck": 0,
+                "Def": -15,
+                "Res": 10
+            },
+            "Sage": {
+                "HP": 20,
+                "Str": -15,
+                "Mag": 20,
+                "Skl": 20,
+                "Spd": 20,
+                "Lck": 0,
+                "Def": -15,
+                "Res": 20
+            },
+            "Curate / Cleric": {
+                "HP": 20,
+                "Str": -15,
+                "Mag": 10,
+                "Skl": 15,
+                "Spd": 20,
+                "Lck": 0,
+                "Def": -10,
+                "Res": 30
+            },
+            "Bishop": {
+                "HP": 20,
+                "Str": -15,
+                "Mag": 20,
+                "Skl": 20,
+                "Spd": 20,
+                "Lck": 0,
+                "Def": -15,
+                "Res": 20
+            },
+            "Thief / Dancer": {
+                "HP": 30,
+                "Str": 10,
+                "Mag": -20,
+                "Skl": 30,
+                "Spd": 40,
+                "Lck": 0,
+                "Def": 5,
+                "Res": -10
+            },
+            "Manakete": {
+                "HP": 50,
+                "Str": 20,
+                "Mag": 10,
+                "Skl": 30,
+                "Spd": 20,
+                "Lck": 0,
+                "Def": 10,
+                "Res": -10
+            },
+            "Ballistician": {
+                "HP": 40,
+                "Str": 20,
+                "Mag": -10,
+                "Skl": 10,
+                "Spd": 20,
+                "Lck": 0,
+                "Def": 20,
+                "Res": -15
+            },
+            "Chameleon": {
+                "HP": 40,
+                "Str": 30,
+                "Mag": -20,
+                "Skl": 30,
+                "Spd": 30,
+                "Lck": 0,
+                "Def": 15,
+                "Res": -15
+            },
+            "Soldier / Emperor": {
+                "HP": 0,
+                "Str": 0,
+                "Mag": 0,
+                "Skl": 0,
+                "Spd": 0,
+                "Lck": 0,
+                "Def": 0,
+                "Res": 0
+            },
+            "Transformed Dragon": {
+                "HP": 50,
+                "Str": 20,
+                "Mag": 10,
+                "Skl": 30,
+                "Spd": 20,
+                "Lck": 0,
+                "Def": 20,
+                "Res": -10
+            }
+        },
+        "caps": {
+            "Lord": {
+                "HP": 60,
+                "Str": 25,
+                "Mag": 20,
+                "Skl": 25,
+                "Spd": 25,
+                "Lck": 30,
+                "Def": 25,
+                "Res": 25
+            },
+            "Non-promoted": {
+                "HP": 60,
+                "Str": 20,
+                "Mag": 20,
+                "Skl": 20,
+                "Spd": 20,
+                "Lck": 20,
+                "Def": 20,
+                "Res": 20
+            },
+            "Falcon Knight": {
+                "HP": 60,
+                "Str": 24,
+                "Mag": 20,
+                "Skl": 26,
+                "Spd": 26,
+                "Lck": 30,
+                "Def": 24,
+                "Res": 26
+            },
+            "Dracoknight": {
+                "HP": 60,
+                "Str": 26,
+                "Mag": 20,
+                "Skl": 26,
+                "Spd": 23,
+                "Lck": 30,
+                "Def": 30,
+                "Res": 21
+            },
+            "Paladin": {
+                "HP": 60,
+                "Str": 25,
+                "Mag": 21,
+                "Skl": 28,
+                "Spd": 25,
+                "Lck": 25,
+                "Def": 30,
+                "Res": 25
+            },
+            "General": {
+                "HP": 60,
+                "Str": 27,
+                "Mag": 20,
+                "Skl": 25,
+                "Spd": 21,
+                "Lck": 30,
+                "Def": 30,
+                "Res": 20
+            },
+            "Sniper": {
+                "HP": 60,
+                "Str": 24,
+                "Mag": 20,
+                "Skl": 30,
+                "Spd": 29,
+                "Lck": 30,
+                "Def": 23,
+                "Res": 20
+            },
+            "Hero": {
+                "HP": 60,
+                "Str": 25,
+                "Mag": 20,
+                "Skl": 30,
+                "Spd": 26,
+                "Lck": 30,
+                "Def": 25,
+                "Res": 22
+            },
+            "Swordmaster": {
+                "HP": 60,
+                "Str": 24,
+                "Mag": 20,
+                "Skl": 29,
+                "Spd": 30,
+                "Lck": 30,
+                "Def": 22,
+                "Res": 23
+            },
+            "Warrior": {
+                "HP": 60,
+                "Str": 30,
+                "Mag": 20,
+                "Skl": 26,
+                "Spd": 24,
+                "Lck": 30,
+                "Def": 28,
+                "Res": 20
+            },
+            "Horseman": {
+                "HP": 60,
+                "Str": 24,
+                "Mag": 20,
+                "Skl": 28,
+                "Spd": 30,
+                "Lck": 30,
+                "Def": 23,
+                "Res": 23
+            },
+            "Barbarian": {
+                "HP": 60,
+                "Str": 30,
+                "Mag": 30,
+                "Skl": 30,
+                "Spd": 30,
+                "Lck": 30,
+                "Def": 30,
+                "Res": 30
+            },
+            "Berserker": {
+                "HP": 60,
+                "Str": 30,
+                "Mag": 20,
+                "Skl": 24,
+                "Spd": 28,
+                "Lck": 22,
+                "Def": 24,
+                "Res": 20
+            },
+            "Sorcerer": {
+                "HP": 60,
+                "Str": 20,
+                "Mag": 30,
+                "Skl": 28,
+                "Spd": 25,
+                "Lck": 30,
+                "Def": 20,
+                "Res": 25
+            },
+            "Sage": {
+                "HP": 60,
+                "Str": 20,
+                "Mag": 30,
+                "Skl": 28,
+                "Spd": 25,
+                "Lck": 30,
+                "Def": 20,
+                "Res": 25
+            },
+            "Bishop": {
+                "HP": 60,
+                "Str": 20,
+                "Mag": 25,
+                "Skl": 26,
+                "Spd": 25,
+                "Lck": 30,
+                "Def": 22,
+                "Res": 30
+            },
+            "Thief": {
+                "HP": 60,
+                "Str": 20,
+                "Mag": 20,
+                "Skl": 25,
+                "Spd": 30,
+                "Lck": 30,
+                "Def": 25,
+                "Res": 20
+            },
+            "Manakete": {
+                "HP": 60,
+                "Str": 20,
+                "Mag": 20,
+                "Skl": 20,
+                "Spd": 20,
+                "Lck": 30,
+                "Def": 20,
+                "Res": 20
+            },
+            "Ballistician": {
+                "HP": 60,
+                "Str": 25,
+                "Mag": 20,
+                "Skl": 20,
+                "Spd": 20,
+                "Lck": 30,
+                "Def": 25,
+                "Res": 20
+            },
+            "Chameleon": {
+                "HP": 60,
+                "Str": 20,
+                "Mag": 20,
+                "Skl": 25,
+                "Spd": 25,
+                "Lck": 30,
+                "Def": 20,
+                "Res": 20
+            },
+            "Dancer": {
+                "HP": 60,
+                "Str": 20,
+                "Mag": 20,
+                "Skl": 25,
+                "Spd": 25,
+                "Lck": 30,
+                "Def": 20,
+                "Res": 20
+            },
+            "Emperor": {
+                "HP": 80,
+                "Str": 30,
+                "Mag": 30,
+                "Skl": 30,
+                "Spd": 30,
+                "Lck": 30,
+                "Def": 30,
+                "Res": 30
+            },
+            "Transformed Dragon": {
+                "HP": 60,
+                "Str": 30,
+                "Mag": 30,
+                "Skl": 30,
+                "Spd": 30,
+                "Lck": 30,
+                "Def": 30,
+                "Res": 30
+            },
+            "Dark Dragon": {
+                "HP": 99,
+                "Str": 40,
+                "Mag": 30,
+                "Skl": 40,
+                "Spd": 30,
+                "Lck": 30,
+                "Def": 40,
+                "Res": 30
+            }
+        },
+        "promo_gains": {
+            "Pegasus Knight -> Falcon Knight": {
+                "HP": 4,
+                "Str": 2,
+                "Mag": 1,
+                "Skl": 2,
+                "Spd": 2,
+                "Lck": 0,
+                "Def": 2,
+                "Res": 3
+            },
+            "Pegasus Knight -> Dracoknight": {
+                "HP": 4,
+                "Str": 4,
+                "Mag": -1,
+                "Skl": 0,
+                "Spd": 0,
+                "Lck": 0,
+                "Def": 5,
+                "Res": -3
+            },
+            "Cavalier -> Paladin": {
+                "HP": 4,
+                "Str": 2,
+                "Mag": 1,
+                "Skl": 3,
+                "Spd": 1,
+                "Lck": 0,
+                "Def": 1,
+                "Res": 6
+            },
+            "Knight -> General": {
+                "HP": 10,
+                "Str": 2,
+                "Mag": 1,
+                "Skl": 1,
+                "Spd": 4,
+                "Lck": 0,
+                "Def": 4,
+                "Res": 3
+            },
+            "Archer -> Sniper": {
+                "HP": 8,
+                "Str": 2,
+                "Mag": 1,
+                "Skl": 5,
+                "Spd": 5,
+                "Lck": 0,
+                "Def": 1,
+                "Res": 3
+            },
+            "Mercenary -> Hero": {
+                "HP": 6,
+                "Str": 2,
+                "Mag": 1,
+                "Skl": 2,
+                "Spd": 2,
+                "Lck": 0,
+                "Def": 2,
+                "Res": 3
+            },
+            "Myrmidon -> Swordmaster": {
+                "HP": 6,
+                "Str": 2,
+                "Mag": 1,
+                "Skl": 2,
+                "Spd": 2,
+                "Lck": 0,
+                "Def": 2,
+                "Res": 3
+            },
+            "Fighter -> Warrior": {
+                "HP": 6,
+                "Str": 2,
+                "Mag": 0,
+                "Skl": 1,
+                "Spd": 1,
+                "Lck": 0,
+                "Def": 2,
+                "Res": 1
+            },
+            "Hunter -> Horseman": {
+                "HP": 2,
+                "Str": 0,
+                "Mag": 1,
+                "Skl": 2,
+                "Spd": 2,
+                "Lck": 0,
+                "Def": 3,
+                "Res": 3
+            },
+            "Pirate -> Berserker": {
+                "HP": 6,
+                "Str": 2,
+                "Mag": 0,
+                "Skl": 1,
+                "Spd": 1,
+                "Lck": 0,
+                "Def": 2,
+                "Res": 0
+            },
+            "Dark Mage -> Sorcerer": {
+                "HP": 6,
+                "Str": 2,
+                "Mag": 2,
+                "Skl": 1,
+                "Spd": 1,
+                "Lck": 0,
+                "Def": 0,
+                "Res": 3
+            },
+            "Mage -> Sage": {
+                "HP": 6,
+                "Str": 3,
+                "Mag": 2,
+                "Skl": 1,
+                "Spd": 1,
+                "Lck": 0,
+                "Def": 1,
+                "Res": 2
+            },
+            "Curate -> Bishop": {
+                "HP": 6,
+                "Str": 1,
+                "Mag": 2,
+                "Skl": 1,
+                "Spd": 0,
+                "Lck": 0,
+                "Def": 0,
+                "Res": 3
+            },
+            "Cleric -> Bishop": {
+                "HP": 6,
+                "Str": 1,
+                "Mag": 2,
+                "Skl": 1,
+                "Spd": 1,
+                "Lck": 0,
+                "Def": 2,
+                "Res": 1
+            }
+        }
+    }
+}

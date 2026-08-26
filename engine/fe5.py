@@ -60,139 +60,14 @@ def get_valid_classes_for_fe5_character(char_name, char_data):
     return [base_cls, promoted_cls]
 
 def load_fe5_data():
-    raw = {
-        name: fetch_page(name, URLS_FE5[name])
-        for name in ["fe5_bases", "fe5_growths", "fe5_promotions"]
-    }
-
-    # 1. Parse Promotion Gains
-    promo_gains = {}
-    tables = parse_html_tables(raw["fe5_promotions"])
-    for table in tables:
-        if len(table) > 1 and "Str" in table[0] and "Mag" in table[0]:
-            headers = [clean_value(h) for h in table[0]]
-            for row in table[1:]:
-                if len(row) < len(headers):
-                    continue
-                base_cls = clean_value(row[0])
-                promo_cls = clean_value(row[1])
-                if not base_cls or base_cls == "Class" or base_cls == "Base Class":
-                    continue
-                
-                # Column mappings
-                str_val = parse_int(row[headers.index("Str")])
-                mag_val = parse_int(row[headers.index("Mag")])
-                skl_val = parse_int(row[headers.index("Skl")])
-                spd_val = parse_int(row[headers.index("Spd")])
-                def_val = parse_int(row[headers.index("Def")])
-                bld_val = parse_int(row[headers.index("Con")]) if "Con" in headers else 0
-                mov_val = parse_int(row[headers.index("Mov")]) if "Mov" in headers else 0
-                
-                key = (base_cls, promo_cls)
-                promo_gains[key] = {
-                    "HP": 0,
-                    "Str": str_val,
-                    "Mag": mag_val,
-                    "Skl": skl_val,
-                    "Spd": spd_val,
-                    "Lck": 0,
-                    "Def": def_val,
-                    "Bld": bld_val,
-                    "Mov": mov_val,
-                }
-
-    # 2. Parse Character Bases
-    characters = {}
-    tables = parse_html_tables(raw["fe5_bases"])
-    for table in tables:
-        if len(table) > 1 and "HP" in table[0] and "Lv" in table[0]:
-            headers = [clean_value(h) for h in table[0]]
-            for row in table[1:]:
-                if len(row) < len(headers):
-                    continue
-                name = clean_value(row[headers.index("Name")])
-                if not name or name == "Name":
-                    continue
-                
-                cls_name = clean_value(row[headers.index("Class")])
-                
-                characters[name] = {
-                    "name": name,
-                    "join_lv": parse_int(row[headers.index("Lv")]),
-                    "default_class": cls_name,
-                    "is_female": name in {"Evayle", "Tania", "Lara", "Karin", "Nanna", "Selphina", "Olwen", "Mareeta", "Tina", "Eda", "Linoan", "Sara", "Miranda", "Misha", "Amalda"},
-                    "bases": {
-                        "HP": parse_int(row[headers.index("HP")]),
-                        "Str": parse_int(row[headers.index("Str")]),
-                        "Mag": parse_int(row[headers.index("Mag")]),
-                        "Skl": parse_int(row[headers.index("Skl")]),
-                        "Spd": parse_int(row[headers.index("Spd")]),
-                        "Lck": parse_int(row[headers.index("Lck")]),
-                        "Def": parse_int(row[headers.index("Def")]),
-                        "Bld": parse_int(row[headers.index("Bld")]),
-                        "Mov": parse_int(row[headers.index("Mov")]),
-                    }
-                }
-
-    # 3. Parse Character Growths
-    tables = parse_html_tables(raw["fe5_growths"])
-    for table in tables:
-        if len(table) > 1 and "HP" in table[0] and "Str" in table[0]:
-            headers = [clean_value(h) for h in table[0]]
-            for row in table[1:]:
-                if len(row) < len(headers):
-                    continue
-                name = clean_value(row[0])
-                if not name or name == "Character" or name == "Name":
-                    continue
-                
-                if name == "Leaf":
-                    db_name = "Leaf"
-                elif name == "Fin":
-                    db_name = "Fin"
-                elif name == "Othin":
-                    db_name = "Othin"
-                elif name == "Halvan":
-                    db_name = "Halvan"
-                else:
-                    db_name = name
-                
-                # Match character in database
-                matching = [c for c in characters if c.lower() == db_name.lower() or db_name.lower() in c.lower()]
-                if not matching:
-                    continue
-                
-                growths = {
-                    "HP": parse_int(row[headers.index("HP")]),
-                    "Str": parse_int(row[headers.index("Str")]),
-                    "Mag": parse_int(row[headers.index("Mag")]),
-                    "Skl": parse_int(row[headers.index("Skl")]),
-                    "Spd": parse_int(row[headers.index("Spd")]),
-                    "Lck": parse_int(row[headers.index("Lck")]),
-                    "Def": parse_int(row[headers.index("Def")]),
-                    "Bld": parse_int(row[headers.index("Bld")]),
-                    "Mov": parse_int(row[headers.index("Mov")]),
-                }
-                
-                for cname in matching:
-                    characters[cname]["growths"] = growths
-
-    # Unify into standard structure
-    database = {"characters": {}, "classes": {"caps": {}, "promo_gains": promo_gains}}
-    for name, data in characters.items():
-        if "growths" in data:
-            database["characters"][name] = {
-                "name": name,
-                "join_lv": data["join_lv"],
-                "default_class": data["default_class"],
-                "is_female": data["is_female"],
-                "absolute_bases": data["bases"],
-                "base_growths": data["growths"]
-            }
-            
-    return database
-
-
+    import json, os
+    from engine.common import BASE_DIR
+    with open(os.path.join(BASE_DIR, 'data', 'fe5.json'), 'r', encoding='utf-8') as f:
+        db = json.load(f)
+    if 'classes' in db and 'promo_gains' in db['classes']:
+        pg = db['classes']['promo_gains']
+        db['classes']['promo_gains'] = {tuple(k.split(' -> ')) if ' -> ' in k else k: v for k, v in pg.items()}
+    return db
 # --- FE5 Stat Calculation Engine ---
 def is_fe5_promoted(cls_name):
     return cls_name in FE5_PROMOTED_CLASSES

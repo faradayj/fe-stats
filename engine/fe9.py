@@ -165,137 +165,14 @@ def get_fe9_direct_promotion_class(char_name, char_data):
     return FE9_PROMOTION_MAP.get(base_cls, base_cls)
 
 def load_fe9_data():
-    raw = {
-        name: fetch_page(name, URLS_FE9[name])
-        for name in ["fe9_bases", "fe9_growths", "fe9_caps", "fe9_promotions"]
-    }
-
-    # 1. Parse Class Caps
-    class_caps = {}
-    tables = parse_html_tables(raw["fe9_caps"])
-    for table in tables:
-        if len(table) > 1 and "HP" in table[0]:
-            headers = [clean_value(h) for h in table[0]]
-            for row in table[1:]:
-                if len(row) < len(headers):
-                    continue
-                cls_name = clean_value(row[0]).replace("*", "").strip()
-                if not cls_name or cls_name == "Class":
-                    continue
-                
-                class_caps[cls_name] = {
-                    "HP": parse_int(row[headers.index("HP")]),
-                    "Str": parse_int(row[headers.index("Str")]),
-                    "Mag": parse_int(row[headers.index("Mag")]),
-                    "Skl": parse_int(row[headers.index("Skl")]),
-                    "Spd": parse_int(row[headers.index("Spd")]),
-                    "Lck": parse_int(row[headers.index("Lck")]),
-                    "Def": parse_int(row[headers.index("Def")]),
-                    "Res": parse_int(row[headers.index("Res")]),
-                }
-
-    # 2. Parse Promotion Gains
-    promo_gains = {}
-    tables = parse_html_tables(raw["fe9_promotions"])
-    for table in tables:
-        if len(table) > 1 and "Promotion" in table[0]:
-            headers = [clean_value(h) for h in table[0]]
-            for row in table[1:]:
-                if len(row) < len(headers):
-                    continue
-                base_cls = clean_value(row[0]).strip()
-                promo_cls = clean_value(row[1]).strip()
-                if not base_cls or base_cls == "Class" or base_cls == "Base Class":
-                    continue
-                
-                key = (base_cls, promo_cls)
-                promo_gains[key] = {
-                    "HP": parse_int(row[headers.index("HP")]),
-                    "Str": parse_int(row[headers.index("Str")]),
-                    "Mag": parse_int(row[headers.index("Mag")]),
-                    "Skl": parse_int(row[headers.index("Skl")]),
-                    "Spd": parse_int(row[headers.index("Spd")]),
-                    "Lck": 0,
-                    "Def": parse_int(row[headers.index("Def")]),
-                    "Res": parse_int(row[headers.index("Res")]),
-                }
-
-    # 3. Parse Character Bases
-    characters = {}
-    tables = parse_html_tables(raw["fe9_bases"])
-    for table in tables:
-        if len(table) > 1 and "HP" in table[0] and "Lv" in table[0]:
-            headers = [clean_value(h) for h in table[0]]
-            for row in table[1:]:
-                if len(row) < len(headers):
-                    continue
-                name = clean_value(row[0]).strip()
-                if not name or name == "Name":
-                    continue
-                if name in ("Leanne", "Sephiran"):
-                    continue
-                
-                cls_name = clean_value(row[headers.index("Class")]).strip()
-                is_female = name in FE9_FEMALE_CHARACTERS
-                
-                characters[name] = {
-                    "name": name,
-                    "join_lv": parse_int(row[headers.index("Lv")]),
-                    "default_class": cls_name,
-                    "is_female": is_female,
-                    "bases": {
-                        "HP": parse_int(row[headers.index("HP")]),
-                        "Str": parse_int(row[headers.index("Str")]),
-                        "Mag": parse_int(row[headers.index("Mag")]),
-                        "Skl": parse_int(row[headers.index("Skl")]),
-                        "Spd": parse_int(row[headers.index("Spd")]),
-                        "Lck": parse_int(row[headers.index("Lck")]),
-                        "Def": parse_int(row[headers.index("Def")]),
-                        "Res": parse_int(row[headers.index("Res")]),
-                    }
-                }
-
-    # 4. Parse Character Growths
-    tables = parse_html_tables(raw["fe9_growths"])
-    growths = {}
-    for table in tables:
-        if len(table) > 1 and "HP" in table[0] and "Luck" in table[0]:
-            headers = [clean_value(h) for h in table[0]]
-            for row in table[1:]:
-                if len(row) < len(headers):
-                    continue
-                name = clean_value(row[0]).strip()
-                if not name or name == "Name":
-                    continue
-                if "Blossom" in name:
-                    continue
-                
-                growths[name] = {
-                    "HP": parse_int(row[headers.index("HP")]),
-                    "Str": parse_int(row[headers.index("Str")]),
-                    "Mag": parse_int(row[headers.index("Mag")]),
-                    "Skl": parse_int(row[headers.index("Skl")]),
-                    "Spd": parse_int(row[headers.index("Spd")]),
-                    "Lck": parse_int(row[headers.index("Luck")]),
-                    "Def": parse_int(row[headers.index("Def")]),
-                    "Res": parse_int(row[headers.index("Res")]),
-                }
-
-    for name in list(characters.keys()):
-        if name in growths:
-            characters[name]["growths"] = growths[name]
-            characters[name]["absolute_bases"] = characters[name]["bases"]
-            characters[name]["base_growths"] = characters[name]["growths"]
-        else:
-            del characters[name]
-            
-    return {
-        "characters": characters,
-        "classes": {
-            "caps": class_caps,
-            "promo_gains": promo_gains
-        }
-    }
+    import json, os
+    from engine.common import BASE_DIR
+    with open(os.path.join(BASE_DIR, 'data', 'fe9.json'), 'r', encoding='utf-8') as f:
+        db = json.load(f)
+    if 'classes' in db and 'promo_gains' in db['classes']:
+        pg = db['classes']['promo_gains']
+        db['classes']['promo_gains'] = {tuple(k.split(' -> ')) if ' -> ' in k else k: v for k, v in pg.items()}
+    return db
 
 def calculate_fe9_avg_stats(char_data, target_class, db):
     is_female = char_data["is_female"]
