@@ -67,6 +67,8 @@ def classes_fe11(char):
 def classes_fe12(char):
     if fixed_class(char):
         return [fixed_class(char)]
+    if char["name"] == "Sheema":
+        return ["General"] + FEMALE_CLASSES  # the one woman who joins as a General
     return FEMALE_CLASSES if char["is_female"] else FE12_MALE_CLASSES
 
 

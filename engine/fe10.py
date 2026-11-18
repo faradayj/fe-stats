@@ -117,12 +117,7 @@ def calculate(char, target, db):
         if tier_of(cls) == 3:
             # Every tier 2 -> 3 promotion shares one row per gender and physical/magical type
             return gains_db[f"{'Female' if is_female else 'Male'} {'Magical' if prev in MAGICAL_TIER2 else 'Physical'}"]
-        gender = "(female)" if is_female else "(male)"
-        for key in ((f"{prev} {gender}", f"{cls} {gender}"), (prev, cls)):
-            if key in gains_db:
-                return gains_db[key]
-        # shortcut: first row whose names contain both classes, replace with exact keys if a wrong match shows up
-        return next(row for pair, row in gains_db.items() if isinstance(pair, tuple) and prev in pair[0] and cls in pair[1])
+        return gains_db[(prev, cls)]
 
     chain = classes(char)
     path = chain[:chain.index(target) + 1]

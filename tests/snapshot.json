@@ -787,30 +787,30 @@
                     "class_path": "Thief -> Dancer",
                     "final_level": "20/20",
                     "stats": {
-                        "HP": 30.2,
-                        "Str": 3.6,
-                        "Mag": 3.6,
-                        "Skl": 18.0,
+                        "HP": 30.65,
+                        "Str": 3.7,
+                        "Mag": 3.7,
+                        "Skl": 18.5,
                         "Spd": 20.0,
                         "Lck": 20.0,
-                        "Def": 7.2,
-                        "Bld": 4.8,
-                        "Mov": 7.08
+                        "Def": 7.4,
+                        "Bld": 4.85,
+                        "Mov": 7.11
                     }
                 },
                 "Thief Fighter (via Dancer)": {
                     "class_path": "Thief -> Dancer -> Thief Fighter",
                     "final_level": "20/20/20",
                     "stats": {
-                        "HP": 38.75,
-                        "Str": 8.5,
-                        "Mag": 6.5,
+                        "HP": 39.2,
+                        "Str": 8.6,
+                        "Mag": 6.6,
                         "Skl": 20.0,
                         "Spd": 20.0,
                         "Lck": 20.0,
-                        "Def": 13.0,
-                        "Bld": 6.75,
-                        "Mov": 8.65
+                        "Def": 13.2,
+                        "Bld": 6.8,
+                        "Mov": 8.68
                     }
                 }
             }
@@ -39696,6 +39696,20 @@
             "default_class": "General",
             "is_female": true,
             "classes": {
+                "General": {
+                    "class_path": "General",
+                    "final_level": "1 -> 20",
+                    "stats": {
+                        "HP": 47.2,
+                        "Str": 24.3,
+                        "Mag": 1.0,
+                        "Skl": 24.35,
+                        "Spd": 19.4,
+                        "Lck": 24.2,
+                        "Def": 24.6,
+                        "Res": 4.9
+                    }
+                },
                 "Falcon Knight": {
                     "class_path": "Falcon Knight",
                     "final_level": "1 -> 20",

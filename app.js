@@ -48,6 +48,9 @@ const bstOf = classData => STATS.reduce((sum, s) => sum + classData.stats[s], 0)
 // A segment is [class, labelPrefix, firstLevel, rows, start, growths, caps].
 const capsOf = classData => Object.fromEntries(STATS.map((s, i) => [s, classData.segs.at(-1)[6][i]]));
 
+// A cap of 0 means the class does not use that stat
+const atCap = (value, cap) => cap > 0 && value >= cap;
+
 function computeBSTRankings() {
     bstClassRankings = {};
 
@@ -255,7 +258,7 @@ function renderBSTLeaderboard(className) {
 
         STATS.forEach(s => {
             const val = (item.stats && item.stats[s] !== undefined) ? item.stats[s] : 0;
-            const isCapped = val >= item.caps[s];
+            const isCapped = atCap(val, item.caps[s]);
 
             tdHTML += `
                 <td class="${isCapped ? 'cap-cell' : ''}">
@@ -691,7 +694,7 @@ function renderReclassTable(name) {
         STATS.forEach(s => {
             const statVal = clsData.stats[s];
             const capVal = classCaps[s];
-            const isCapped = statVal >= capVal;
+            const isCapped = atCap(statVal, capVal);
 
             tdHTML += `
                 <td class="${isCapped ? 'cap-cell' : ''}">
@@ -836,7 +839,7 @@ function renderSVGChart() {
         activeStats.forEach((s, sIdx) => {
             const val = (clsData.stats && clsData.stats[s] !== undefined) ? clsData.stats[s] : 0;
             const capVal = (classCaps && classCaps[s] !== undefined) ? classCaps[s] : 99;
-            const isCapped = val >= capVal;
+            const isCapped = atCap(val, capVal);
             const color = STAT_COLORS[s] || `var(--stat-${s.toLowerCase()})`;
             const barW = Math.max(2, x(val));
             const subY = yPos + classPaddingTop + (sIdx * (subBarHeight + statGap));
@@ -962,9 +965,9 @@ function runSimulatorSimulation() {
         for (let row = 0; row < rows; row++) {
             if (row > 0) stats = stats.map((v, i) => Math.min(caps[i] * 100, v + growths[i]));
             addRow(`${labelPrefix}${firstLevel + row}`, clsName, stats.map((v, i) => `
-                <td class="${v >= caps[i] * 100 ? 'cap-cell' : ''}">
+                <td class="${atCap(v, caps[i] * 100) ? 'cap-cell' : ''}">
                     ${(v / 100).toFixed(2)}
-                    ${v >= caps[i] * 100 ? '<span class="sim-cap-badge">CAP</span>' : ''}
+                    ${atCap(v, caps[i] * 100) ? '<span class="sim-cap-badge">CAP</span>' : ''}
                 </td>
             `));
         }

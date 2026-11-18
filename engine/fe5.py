@@ -83,6 +83,4 @@ def calculate(char, target, db):
         caps=lambda cls: CAPS,
         gains=gains,
     )
-    if lara_path:
-        stage_list[0][3] = 19  # existing behaviour: Lara leaves Thief one level early on the Dancer paths
     return simulate(NAMES, char["absolute_bases"], stage_list, final_level(char["join_lv"], maxes, pre_promoted))

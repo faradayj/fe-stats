@@ -7,9 +7,6 @@ from engine import GAMES
 from engine.common import load_db
 
 SNAPSHOT = os.path.join(os.path.dirname(__file__), "tests", "snapshot.json")
-# Characters whose default promotion is not a class they can end in
-NO_DIRECT = {("fe12", "Sheema")}  # joins as a General, which the female class pool does not contain
-
 
 def diff(want, got, path):
     """Yield every place where `want` is not contained in `got` (extra keys in `got` are fine)."""
@@ -37,7 +34,7 @@ def check_exports(game, db):
     rules = GAMES[game]
     for name, char in db["characters"].items():
         keys = rules.classes(char)
-        if "My Unit" not in name and (game, name) not in NO_DIRECT and rules.direct(char) not in keys:
+        if "My Unit" not in name and rules.direct(char) not in keys:
             yield f"{game}/{name}: direct class {rules.direct(char)!r} is not one of {keys}"
         for key in keys:
             calc = rules.calculate(char, key, db)
