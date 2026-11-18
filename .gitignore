@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Scraped Serenes Forest HTML cache (automatically rebuilt by python engine if needed)
+# Scraped Serenes Forest HTML left over from the removed scraper
 cache/
 
 # Local backup files
