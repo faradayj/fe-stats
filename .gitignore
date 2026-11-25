@@ -1,0 +1,10 @@
+# Python bytecode caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Scraped Serenes Forest HTML left over from the removed scraper
+cache/
+
+# Local backup files
+*.bak

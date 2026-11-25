@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Emblem Average Stats Interactive Dashboard</title>
+    <!-- Monospace Fonts for Hacker Vibe -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- --- Sidebar --- -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="../" class="hub-btn">
+                <span class="hub-btn-text">Return to Hub</span>
+            </a>
+            <h1 class="sidebar-title">FE Average Stats</h1>
+            <div class="game-select-container">
+                <select id="game-selector" class="game-select" onchange="switchGame(this.value)">
+                    <option value="fe5">FE5: Thracia 776</option>
+                    <option value="fe6">FE6: The Binding Blade</option>
+                    <option value="fe7">FE7: The Blazing Blade</option>
+                    <option value="fe8">FE8: The Sacred Stones</option>
+                    <option value="fe9">FE9: Path of Radiance</option>
+                    <option value="fe10">FE10: Radiant Dawn</option>
+                    <option value="fe11">FE11: Shadow Dragon</option>
+                    <option value="fe12">FE12: Heroes of Light & Shadow</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="sidebar-search-box">
+            <button type="button" id="bst-toggle" class="sidebar-toggle" aria-pressed="false" onclick="setLeaderboardOpen(!leaderboardOpen); showMainOnPhone()">BST Leaderboard</button>
+            <div class="search-input-wrapper">
+                <input type="text" id="search-bar" class="search-input" placeholder="Search characters...">
+            </div>
+            <div class="filters-grid">
+                <select id="filter-gender" class="filter-select">
+                    <option value="all">All Genders</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <select id="filter-pool" class="filter-select">
+                    <option value="all">All Classes</option>
+                    <option value="cavalry">Cavalry/Flyer</option>
+                    <option value="magic">Magic/Staff</option>
+                    <option value="infantry">Infantry/Melee</option>
+                    <option value="special">Special Class</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="character-list" id="char-list-container">
+            <!-- Loaded dynamically in JS -->
+        </div>
+    </div>
+
+    <!-- --- Main Content View --- -->
+    <div class="main-content">
+        <!-- Hero Header -->
+        <div class="char-hero">
+            <div>
+                <div class="char-hero-title-group">
+                    <h2 class="char-hero-name" id="hero-char-name">Marth</h2>
+                </div>
+                <div class="char-hero-badges">
+                    <span class="hero-badge hero-badge-gender" id="hero-gender">Male</span>
+                    <span class="hero-badge hero-badge-class" id="hero-default-class">Lord</span>
+                    <span class="hero-badge hero-badge-level" id="hero-join-level">Base Level: 1</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Stats Progress Bars -->
+        <div class="char-details-grid">
+            <div class="stat-card-panel">
+                <div class="panel-title">
+                    <span>Personal Base Stats</span>
+                    <span class="panel-title-desc">Absolute stats</span>
+                </div>
+                <div class="personal-stats-list" id="personal-bases-container">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <div class="stat-card-panel">
+                <div class="panel-title">
+                    <span>Personal Growth Rates</span>
+                    <span class="panel-title-desc">Raw percentages</span>
+                </div>
+                <div class="personal-stats-list" id="personal-growths-container">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <div class="tabs-container">
+            <button class="tab-btn active" onclick="switchTab('reclass-list-view', this)">Reclass Statistics</button>
+            <button class="tab-btn" onclick="switchTab('visual-chart-view', this)">Visual Comparison Chart</button>
+            <button class="tab-btn" onclick="switchTab('simulator-view', this)">Level Growth Simulator</button>
+        </div>
+
+        <!-- VIEW 1: Reclass List and Table -->
+        <div id="reclass-list-view" class="view-section active">
+            <div class="flex-row-between">
+                <div>
+                    <h3 class="text-heading">Calculated Average Stats at Max Level</h3>
+                    <p class="text-sub">This table lists calculated stats at final max level. Click headers to sort. Select a class to view details.</p>
+                </div>
+                <div class="filter-container">
+                    <span class="filter-label">Class Tier:</span>
+                    <select id="filter-table-tier" class="filter-select" onchange="renderReclassTable(currentCharacterName)">
+                        <option value="all">All Classes</option>
+                        <option value="promoted">Promoted Only</option>
+                        <option value="base">Base / Unpromoted</option>
+                        <option value="special">Special Only</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="reclass-table-card">
+                <table class="reclass-table">
+                    <thead>
+                        <tr id="table-headers">
+                            <th onclick="handleHeaderClick('class')">Class Path <span id="sort-icon-class"></span></th>
+                            <th onclick="handleHeaderClick('level')">Max Level <span id="sort-icon-level"></span></th>
+                            <th onclick="handleHeaderClick('bst')">BST <span id="sort-icon-bst"></span></th>
+                            <th onclick="handleHeaderClick('HP')">HP <span id="sort-icon-HP"></span></th>
+                            <th onclick="handleHeaderClick('Str')">Str <span id="sort-icon-Str"></span></th>
+                            <th onclick="handleHeaderClick('Mag')">Mag <span id="sort-icon-Mag"></span></th>
+                            <th onclick="handleHeaderClick('Skl')">Skl <span id="sort-icon-Skl"></span></th>
+                            <th onclick="handleHeaderClick('Spd')">Spd <span id="sort-icon-Spd"></span></th>
+                            <th onclick="handleHeaderClick('Lck')">Lck <span id="sort-icon-Lck"></span></th>
+                            <th onclick="handleHeaderClick('Def')">Def <span id="sort-icon-Def"></span></th>
+                            <th onclick="handleHeaderClick('Res')">Res <span id="sort-icon-Res"></span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="reclass-table-body">
+                        <!-- Loaded dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- VIEW 2: Visual Comparison Chart -->
+        <div id="visual-chart-view" class="view-section">
+            <div class="chart-controls-panel">
+                <div class="chart-controls-top">
+                    <div>
+                        <div class="chart-control-title">Compare Class Stats</div>
+                        <p class="text-sub" style="margin-top: 4px;">Toggle stats and filter tiers to compare max level stats across classes.</p>
+                    </div>
+                    <div class="chart-actions-group">
+                        <div class="filter-container" style="padding: 4px 10px;">
+                            <span class="filter-label">Tier:</span>
+                            <select id="filter-chart-tier" class="filter-select" onchange="renderSVGChart()">
+                                <option value="all">All Classes</option>
+                                <option value="promoted">Promoted Only</option>
+                                <option value="base">Base / Unpromoted</option>
+                                <option value="special">Special Only</option>
+                            </select>
+                        </div>
+                        <button type="button" class="chart-btn" onclick="setAllChartStats(true)">Select All</button>
+                        <button type="button" class="chart-btn" onclick="setAllChartStats(false)">Clear</button>
+                    </div>
+                </div>
+                <div class="chart-stats-grid" id="chart-checkboxes-container">
+                    <!-- Dynamically loaded -->
+                </div>
+            </div>
+            
+            <div class="chart-card">
+                <svg id="svg-comparison-chart" class="svg-chart"></svg>
+            </div>
+        </div>
+
+        <!-- VIEW 3: Interactive Growth Simulator -->
+        <div id="simulator-view" class="view-section">
+            <div class="simulator-layout">
+                <!-- Class Selection Cards -->
+                <div class="simulator-selector-card">
+                    <h4 class="text-sub">Select Target Class</h4>
+                    <div class="simulator-select-wrapper" id="sim-class-list-container">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+                
+                <!-- Detailed Progression Log Table -->
+                <div class="simulator-log-card">
+                    <h3 class="text-heading" id="sim-log-title">Level-up Growth Log: Marth as Lord</h3>
+                    <p class="text-sub" id="sim-log-desc">Simulates growths level-by-level, verifying cap clamps at each step.</p>
+                    
+                    <div class="sim-log-scroll">
+                        <table class="sim-table">
+                            <thead>
+                                <tr>
+                                    <th>Level</th>
+                                    <th>Class</th>
+                                    <th>HP</th>
+                                    <th>Str</th>
+                                    <th>Mag</th>
+                                    <th>Skl</th>
+                                    <th>Spd</th>
+                                    <th>Lck</th>
+                                    <th>Def</th>
+                                    <th>Res</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sim-table-body">
+                                <!-- Loaded dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BST Leaderboard: replaces the character page while the sidebar toggle is on -->
+        <div id="bst-leaderboard-view" class="bst-view">
+            <h3 class="text-heading" id="bst-heading">Direct Promotion BST Leaderboard</h3>
+            <p class="text-sub" style="margin-bottom: 24px;" id="bst-subheading">
+                Comparing characters when they stick to their default starting classes and promote directly.
+                Click any column header to sort by BST or individual stats.
+            </p>
+
+            <div class="chart-stats-grid" id="bst-stat-filter" style="margin-bottom: 20px;"></div>
+
+            <div class="bst-dashboard-layout">
+                <!-- Left: Class Grid/Selector -->
+                <div class="bst-class-selector-panel">
+                    <h4 class="text-sub" style="margin-bottom: 12px;">Final Classes</h4>
+                    <div class="bst-class-grid" id="bst-class-grid-container">
+                        <!-- Class cards generated dynamically -->
+                    </div>
+                </div>
+
+                <!-- Right: Leaderboard -->
+                <div class="bst-leaderboard-panel">
+                    <div class="bst-panel-header">
+                        <h3 class="text-heading" id="bst-class-title">Paladin Leaderboard</h3>
+                        <span class="max-lv-badge promo" id="bst-class-max-lv">Max Lv: 20/20</span>
+                    </div>
+                    
+                    <p class="text-sub" style="margin-bottom: 20px;" id="bst-class-desc">Playable characters who stick to their default classes and promote directly to Paladin. Click any header to sort.</p>
+
+                    <div class="reclass-table-card">
+                        <table class="reclass-table">
+                            <thead>
+                                <tr id="bst-table-headers">
+                                    <!-- Dynamic headers loaded in JS -->
+                                </tr>
+                            </thead>
+                            <tbody id="bst-table-body">
+                                <!-- Rank rows loaded dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --- Load JS Data --- -->
+    <script src="average_stats_data.js"></script>
+
+    <!-- --- Core JS Application Logic --- -->
+    <script src="app.js"></script>
+</body>
+</html>
