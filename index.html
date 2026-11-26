@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<script>try { if (localStorage.getItem('sidebar-collapsed') === '1') document.body.classList.add('sidebar-collapsed'); } catch (e) {}</script>
 
     <!-- --- Sidebar --- -->
-    <div class="sidebar">
+    <div id="sidebar" class="sidebar">
         <div class="sidebar-header">
             <a href="../" class="hub-btn">
                 <span class="hub-btn-text">Return to Hub</span>
@@ -59,6 +60,8 @@
             <!-- Loaded dynamically in JS -->
         </div>
     </div>
+
+    <button id="sidebar-toggle" class="sidebar-toggle-btn" aria-label="hide sidebar" aria-expanded="true" onclick="toggleSidebar()" aria-controls="sidebar">&lt;</button>
 
     <!-- --- Main Content View --- -->
     <div class="main-content">

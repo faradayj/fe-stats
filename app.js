@@ -1032,3 +1032,18 @@ function runSimulatorSimulation() {
         previous = stats;
     });
 }
+
+// --- Sidebar toggle ---
+function syncSidebar() {
+    const c = document.body.classList.contains('sidebar-collapsed');
+    const b = document.getElementById('sidebar-toggle');
+    b.textContent = c ? '>' : '<';
+    b.setAttribute('aria-expanded', String(!c));
+    b.setAttribute('aria-label', c ? 'show sidebar' : 'hide sidebar');
+}
+function toggleSidebar() {
+    const c = document.body.classList.toggle('sidebar-collapsed');
+    try { if (c) localStorage.setItem('sidebar-collapsed', '1'); else localStorage.removeItem('sidebar-collapsed'); } catch (e) {}
+    syncSidebar();
+}
+syncSidebar();
